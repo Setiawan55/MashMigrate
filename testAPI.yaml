@@ -1,0 +1,81 @@
+openapi: 3.0.3
+info:
+  title: Petstore Package API
+  version: 1.0.0
+  description: API endpoints for Petstore Package
+
+servers:
+  - url: https://tm-https-tcam.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com
+    description: Public domain server
+
+paths:
+  /company:
+    get:
+      summary: Company IBM
+      description: GET method for /company endpoint
+      operationId: getCompanyIBM
+      responses:
+        '200':
+          description: Successful response
+      x-system:
+        domain: tibco-ibm-service-tibco-bwce.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com
+        path: /company
+      security:
+        - ApiKeyAuth: []
+    post:
+      summary: Company IBM
+      description: POST method for /company endpoint
+      operationId: postCompanyIBM
+      responses:
+        '200':
+          description: Successful response
+      x-system:
+        domain: tibco-ibm-service-tibco-bwce.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com
+        path: /company
+      security:
+        - ApiKeyAuth: []
+  
+  /v2/pet/findByStatus:
+    get:
+      summary: Pet Find By Status
+      description: GET method for /v2/pet/findByStatus endpoint
+      operationId: getPetFindByStatus
+      responses:
+        '200':
+          description: Successful response
+      x-system:
+        domain: petstore.swagger.io
+        path: /v2/pet/findByStatus
+      security:
+        - ApiKeyAuth: []
+    post:
+      summary: Pet Find By Status
+      description: POST method for /v2/pet/findByStatus endpoint
+      operationId: postPetFindByStatus
+      responses:
+        '200':
+          description: Successful response
+      x-system:
+        domain: petstore.swagger.io
+        path: /v2/pet/findByStatus
+      security:
+        - ApiKeyAuth: []
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+
+tags:
+  - name: Company IBM
+    description: Endpoints related to company
+  - name: Pet Find By Status
+    description: Endpoints to find pet by status
+
+x-package-info:
+  package_name: Petstore Package
+  plan_name: Petstore Plan
+  package_key_status: active
+  apikey: gqrasjnnr9nh5sdfje8az6jw
