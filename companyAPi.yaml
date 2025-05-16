@@ -1,0 +1,55 @@
+openapi: 3.0.3
+info:
+  title: Company Package API
+  version: 1.0.0
+  description: API endpoints for Company Package
+
+servers:
+  - url: https://tm-https-tcam.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com
+    description: Public domain server
+
+paths:
+  /company:
+    post:
+      summary: Company IBM
+      description: POST method for /company endpoint
+      operationId: postCompanyIBM
+      responses:
+        '200':
+          description: Successful response
+      x-system:
+        domain: tibco-ibm-service-tibco-bwce.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com
+        path: /company
+      security:
+        - ApiKeyAuth: []
+    get:
+      summary: Company IBM
+      description: GET method for /company endpoint
+      operationId: getCompanyIBM
+      responses:
+        '200':
+          description: Successful response
+      x-system:
+        domain: tibco-ibm-service-tibco-bwce.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com
+        path: /company
+      security:
+        - ApiKeyAuth: []
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-API-Key
+
+tags:
+  - name: Company IBM
+    description: Endpoints related to company
+  - name: Pet Find By Status
+    description: Endpoints to find pet by status
+
+x-package-info:
+  package_name: Company Package
+  plan_name: Company Plans
+  package_key_status: active
+  apikey: rjb3fpx9yhw9kparm894fztm
