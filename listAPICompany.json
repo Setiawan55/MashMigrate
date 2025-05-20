@@ -1,0 +1,51 @@
+{
+"SELECT \n  pde.http_method,\n  pde.domain AS public_domain,\n  pde.path AS public_path,\n  sde.domain AS system_domain,\n  sde.path AS system_path,\n  sdep.name AS endpoint_name,\n  pl.name AS plan_name,\n  pk.apikey,\n  pk.status AS package_key_status,\n  pkg.name AS package_name\nFROM public_domain_endpoints pde\nJOIN system_domain_endpoints sde\n  ON sde.service_definition_endpoint_id = pde.service_definition_endpoint_id\n  AND sde.area_id = pde.area_id\nJOIN service_definition_endpoints sdep\n  ON sdep.id = pde.service_definition_endpoint_id\n  AND sdep.area_id = pde.area_id\nJOIN plans pl\n  ON pl.area_id = pde.area_id\nJOIN package_keys pk\n  ON pk.plan_id = pl.id\n  AND pk.area_id = pl.area_id\nJOIN packages pkg\n  ON pkg.id = pk.package_id\n  AND pkg.area_id = pk.area_id\nWHERE pk.status = 'active'\n  AND pkg.name = 'Company Package'\nORDER BY pkg.name, pl.name, sdep.name": [
+	{
+		"http_method" : "POST",
+		"public_domain" : "tm-https-tcam.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com",
+		"public_path" : "\/company",
+		"system_domain" : "tibco-ibm-service-tibco-bwce.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com",
+		"system_path" : "\/company",
+		"endpoint_name" : "Company IBM",
+		"plan_name" : "Company Plans",
+		"apikey" : "rjb3fpx9yhw9kparm894fztm",
+		"package_key_status" : "active",
+		"package_name" : "Company Package"
+	},
+	{
+		"http_method" : "GET",
+		"public_domain" : "tm-https-tcam.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com",
+		"public_path" : "\/company",
+		"system_domain" : "tibco-ibm-service-tibco-bwce.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com",
+		"system_path" : "\/company",
+		"endpoint_name" : "Company IBM",
+		"plan_name" : "Company Plans",
+		"apikey" : "rjb3fpx9yhw9kparm894fztm",
+		"package_key_status" : "active",
+		"package_name" : "Company Package"
+	},
+	{
+		"http_method" : "GET",
+		"public_domain" : "tm-https-tcam.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com",
+		"public_path" : "\/v2\/pet\/findByStatus",
+		"system_domain" : "petstore.swagger.io",
+		"system_path" : "\/v2\/pet\/findByStatus",
+		"endpoint_name" : "Pet Find By Status",
+		"plan_name" : "Company Plans",
+		"apikey" : "rjb3fpx9yhw9kparm894fztm",
+		"package_key_status" : "active",
+		"package_name" : "Company Package"
+	},
+	{
+		"http_method" : "POST",
+		"public_domain" : "tm-https-tcam.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com",
+		"public_path" : "\/v2\/pet\/findByStatus",
+		"system_domain" : "petstore.swagger.io",
+		"system_path" : "\/v2\/pet\/findByStatus",
+		"endpoint_name" : "Pet Find By Status",
+		"plan_name" : "Company Plans",
+		"apikey" : "rjb3fpx9yhw9kparm894fztm",
+		"package_key_status" : "active",
+		"package_name" : "Company Package"
+	}
+]}
