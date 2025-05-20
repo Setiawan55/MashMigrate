@@ -1,26 +1,25 @@
-schemes:
-  - https
 swagger: "2.0"
 info:
-  title: Company Package APi
+  title: Company Package API Test
   version: 1.0.0
-  description: API endpoints for Company Package
-  x-ibm-name: Company-Package-APi
-servers:
-  - url: https://tm-https-tcam.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com
-    description: Public domain server
+  description: API endpoints for Company Package Test
+  x-ibm-name: Company-Package-API-Test
+schemes:
+  - https
+host: tm-https-tcam.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com
+basePath: /
 paths:
   /company:
     get:
-      summary: Company IBM
-      description: GET method for /company endpoint
+      summary: Get Company IBM
+      description: Retrieve company data from IBM system
       operationId: getCompanyIBM
       consumes:
         - application/json
       produces:
         - application/json
       tags:
-        - system
+        - System
       responses:
         "200":
           description: Successful response
