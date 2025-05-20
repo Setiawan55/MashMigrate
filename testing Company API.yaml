@@ -17,8 +17,6 @@ paths:
         - application/json
       produces:
         - application/json
-      tags:
-        - System
       responses:
         "200":
           description: Successful response
@@ -30,6 +28,26 @@ paths:
           description: Bad request
         "500":
           description: Internal server error
+    post:
+      summary: Post Company IBM
+      description: POST method for /company endpoint
+      operationId: postCompanyIBM
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: Successful response
+          schema:
+            type: object
+            additionalProperties:
+              type: string
+        "400":
+          description: Bad request
+        "500":
+          description: Internal server error
+
 x-ibm-configuration:
   properties:
     target-url:
