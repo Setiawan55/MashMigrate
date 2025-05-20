@@ -47,7 +47,7 @@ x-ibm-configuration:
   properties:
     target-url:
       value: >-
-        petstore.swagger.io/v2/pet/findByStatus
+        https://petstore.swagger.io/v2/pet/findByStatus
       description: The URL of the target service
       encoded: false
   application-authentication:
