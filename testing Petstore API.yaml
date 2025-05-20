@@ -1,6 +1,6 @@
 swagger: "2.0"
 info:
-  title: Swagger Petstore API Test
+  title: Swagger Petstore Migrate API Test
   version: 1.0.0
   description: API endpoints for Swagger Petstore Test
 schemes:
