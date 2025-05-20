@@ -6,8 +6,7 @@ info:
   x-ibm-name: Company-Package-API-Test
 schemes:
   - https
-host: tibco-ibm-service-tibco-bwce.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com
-basePath: /
+  - http
 paths:
   /company:
     get:
@@ -31,3 +30,14 @@ paths:
           description: Bad request
         "500":
           description: Internal server error
+x-ibm-configuration:
+  properties:
+    target-url:
+      value: >-
+        http://tibco-ibm-service-tibco-bwce.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com:80/company
+      description: The URL of the target service
+      encoded: false
+  application-authentication:
+    certificate: false
+  application-authentication-source:
+    - header
