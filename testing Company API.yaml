@@ -47,7 +47,6 @@ paths:
           description: Bad request
         "500":
           description: Internal server error
-
 x-ibm-configuration:
   properties:
     target-url:
