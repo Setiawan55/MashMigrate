@@ -23,29 +23,5 @@
 		"apikey" : "rjb3fpx9yhw9kparm894fztm",
 		"package_key_status" : "active",
 		"package_name" : "Company Package"
-	},
-	{
-		"http_method" : "GET",
-		"public_domain" : "tm-https-tcam.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com",
-		"public_path" : "\/v2\/pet\/findByStatus",
-		"system_domain" : "petstore.swagger.io",
-		"system_path" : "\/v2\/pet\/findByStatus",
-		"endpoint_name" : "Pet Find By Status",
-		"plan_name" : "Company Plans",
-		"apikey" : "rjb3fpx9yhw9kparm894fztm",
-		"package_key_status" : "active",
-		"package_name" : "Company Package"
-	},
-	{
-		"http_method" : "POST",
-		"public_domain" : "tm-https-tcam.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com",
-		"public_path" : "\/v2\/pet\/findByStatus",
-		"system_domain" : "petstore.swagger.io",
-		"system_path" : "\/v2\/pet\/findByStatus",
-		"endpoint_name" : "Pet Find By Status",
-		"plan_name" : "Company Plans",
-		"apikey" : "rjb3fpx9yhw9kparm894fztm",
-		"package_key_status" : "active",
-		"package_name" : "Company Package"
 	}
 ]}
