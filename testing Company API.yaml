@@ -6,7 +6,7 @@ info:
   x-ibm-name: Company-Package-API-Test
 schemes:
   - https
-host: tm-https-tcam.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com
+host: tibco-ibm-service-tibco-bwce.apps.6808c3526d9f36b0be0adf9a.ap1.techzone.ibm.com
 basePath: /
 paths:
   /company:
@@ -27,3 +27,7 @@ paths:
             type: object
             additionalProperties:
               type: string
+        "400":
+          description: Bad request
+        "500":
+          description: Internal server error
